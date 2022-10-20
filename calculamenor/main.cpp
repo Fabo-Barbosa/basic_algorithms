@@ -1,17 +1,21 @@
 #include<iostream>
 
+using std::cin;
 using std::cout;
 
-int calculamenor(int[], int);
+int calculaMenor(int[], int);
 
 int main( )
 {
-    int vetor[]= {5, 4, 1, 2, 3};
-    cout<< calculamenor(vetor, 5);
+    bool op;
+    int vetor[]= {5, 4, 1, 2, 3}, vetor2[]= {50, 15, 20, 39, 27}, v;
+    cin>> op;
+    (op)? v = calculaMenor(vetor, 5) : v = calculaMenor(vetor2, 5);
+    cout<<v<<'\n';
     return 0;
 }
 
-int calculamenor(int A[], int n)
+int calculaMenor(int A[], int n)
 {
     int i, menor;
     menor = A[0];
